@@ -58,7 +58,7 @@ Data loading & inspection,Handling missing values,Data cleaning and analysis was
 11-Employee hire counts have increased over the years
 
 
-**SQL**
+**SQL Queries**
 
 ![Screenshot_20240216_171823_Doc Scanner](https://github.com/srishtikatiyar3/HR-Data-Analysis/assets/160014323/c76fb197-4c53-4b88-9ed8-53d4603c201d)
 
