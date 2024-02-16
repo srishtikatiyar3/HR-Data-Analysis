@@ -63,36 +63,56 @@ Data loading & inspection,Handling missing values,Data cleaning and analysis was
 --Q1-What is the age distribution in the company?
 
 ---age distribution
+
 SELECT 
+
 MIN(age) AS youngest,
+
 MAX(age) AS oldest
+
 from hr_data;
 
 ---age group ---
+
 SELECT age_group,
+
 count(*) AS count
+
 FROM
+
 (SELECT 
+
 CASE
    WHEN age >= 21 and age <= 30 THEN '21 to 30'
+   
    WHEN age >= 31 and age <= 40 THEN '31 to 40'
+   
    WHEN age >= 41 and age <= 50 THEN '41 to 50'
+   
    ELSE '50+'
 END AS age_group
+
 FROM hr_data
+
 WHERE new_termdate IS NULL) AS subquery
+
 GROUP BY age_group
+
 ORDER BY age_group;
 
 ---age group by gender---
+
 SELECT age_group,gender,
 count(*) AS count
+
 FROM
 (SELECT 
 CASE
    WHEN age >= 21 and age <= 30 THEN '21 to 30'
    WHEN age >= 31 and age <= 40 THEN '31 to 40'
+   
    WHEN age >= 41 and age <= 50 THEN '41 to 50'
+   
    ELSE '50+'
 END AS age_group,gender
 FROM hr_data
