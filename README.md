@@ -16,14 +16,7 @@ Data loading & inspection,Handling missing values,Data cleaning and analysis was
 2-What's the gender breakdown in the company?
 
 3-How does gender vary across departments and job titles?
-SELECT 
-department, jobtitle,
-gender,
-count(gender) AS count
-FROM hr_data
-WHERE new_termdate IS NULL
-GROUP BY department, jobtitle, gender
-ORDER BY department, jobtitle, gender ASC;
+
 4-What's the race distribution in the company?
 
 5-What's the average length of employment in the company?
